@@ -78,4 +78,13 @@ public class ConfigController {
 		
 		return "playerStat";
 	}
+	
+	@RequestMapping("/videoList.do")
+	public String video(HttpServletRequest request,HttpServletResponse response, Model model) {
+		ArrayList<VideoTO> lists = testMapper.selectVideoList();
+		
+		model.addAttribute("lists", lists);
+	
+		return "videoList";
+	}
 }

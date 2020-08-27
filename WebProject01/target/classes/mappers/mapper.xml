@@ -11,4 +11,9 @@
 		from player
 		where playerTeam = #{teamName}
 	</select>
+	
+	<select id="selectVideoList" resultType="com.exam.project01.VideoTO">
+		select thumb, src, writer, hit
+		from video
+	</select>
 </mapper>

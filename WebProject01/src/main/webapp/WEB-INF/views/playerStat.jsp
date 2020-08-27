@@ -13,7 +13,6 @@
 </style>
 </head>
 <body>
-test3
 <%=PlayerTable %>
 </body>
 </html>

@@ -96,7 +96,7 @@ nav ul li span:nth-child(4) {
       자유게시판
       <span></span><span></span><span></span><span></span>
     </li>
-    <li>
+    <li onclick="location.href='./videoList.do'">
       동영상
       <span></span><span></span><span></span><span></span>
     </li>
