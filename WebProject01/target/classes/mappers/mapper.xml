@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exam.project01.TestMapper">
+	<select id="selectTeamList" resultType="com.exam.project01.TeamTO">
+		select coach, teamName,teamGame, win, draw, lose, goal, goalav, goalAgainst, avg, GD
+		from team order by win desc
+	</select>
+	
+	<select id="selectPlayerList" parameterType="String" resultType="com.exam.project01.PlayerTO">
+		select playerName, playerGame, playerTime, playerGoal, playerAssist, playerSave, playerTeam
+		from player
+		where playerTeam = #{teamName}
+	</select>
+</mapper>
